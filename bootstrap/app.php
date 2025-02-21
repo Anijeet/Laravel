@@ -13,7 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //
-        $middleware->append(AgeCheck::class);
+        // $middleware->append(AgeCheck::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

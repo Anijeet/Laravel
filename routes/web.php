@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\DatabaseController;
+use App\Http\Controllers\UploadController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,3 +26,7 @@ Route::view('/user-form','form-submission');
 Route::post('addUser',[FormController::class,'addUser']);
 
 Route::get('database',[DatabaseController::class,'database']);
+
+Route::view('/upload','upload');
+
+Route::post('upload',[UploadController::class,'upload']);
